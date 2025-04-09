@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your ARG Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the ARG World</h1>
+        <p>Your mysterious journey begins here...</p>
+    </header>
+
+    <main>
+        <section id="clue1">
+            <h2>Clue #1</h2>
+            <p>This is the first clue, hidden somewhere in the text. Can you find it?</p>
+            <button id="revealClue">Reveal Clue</button>
+            <p id="hiddenClue" style="display: none;">The hidden clue is: <span class="clue-text">X marks the spot</span></p>
+        </section>
+
+        <section id="puzzle">
+            <h2>Puzzle</h2>
+            <p>Can you solve the puzzle? What is 5 + 3?</p>
+            <input type="text" id="puzzleAnswer" placeholder="Your answer">
+            <button id="submitPuzzle">Submit</button>
+            <p id="puzzleResult"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by That Firey Kid</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
