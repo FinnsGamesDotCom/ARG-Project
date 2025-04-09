@@ -1,18 +1,17 @@
-// Reveal Clue Button
-document.getElementById('revealClue').addEventListener('click', function() {
-    document.getElementById('hiddenClue').style.display = 'block';
+// This will randomly reveal the hidden link after a few seconds
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function() {
+        const hiddenLink = document.getElementById('hidden-link');
+        hiddenLink.classList.add('active');
+    }, 5000);  // Reveals the link after 5 seconds (you can adjust this)
 });
 
-// Puzzle Answer Validation
-document.getElementById('submitPuzzle').addEventListener('click', function() {
-    const userAnswer = document.getElementById('puzzleAnswer').value;
-    const result = document.getElementById('puzzleResult');
+// For extra mystery, you can make clicking on placeholders trigger something
+const placeholders = document.querySelectorAll('.placeholder-item');
 
-    if (userAnswer == '8') {
-        result.textContent = 'Correct! Well done.';
-        result.style.color = 'green';
-    } else {
-        result.textContent = 'Incorrect, try again.';
-        result.style.color = 'red';
-    }
+placeholders.forEach((placeholder, index) => {
+    placeholder.addEventListener('click', function () {
+        alert(`You clicked on Placeholder ${index + 1}! Is this clue important?`);
+        // Optionally, reveal hidden messages or links here
+    });
 });
